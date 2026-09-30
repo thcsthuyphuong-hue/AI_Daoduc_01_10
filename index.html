@@ -533,431 +533,399 @@ let importedStudentsCache = []; // Caching for excel import
 const audioPing = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
 const audioFinish = new Audio('https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3');
 
- * NGÂN HÀNG CÂU HỎI TRẮC NGHIỆM KHÁCH QUAN - HUE SMARTTEST 7991
- * Chủ đề: ĐẠO ĐỨC TRONG SỬ DỤNG TRÍ TUỆ NHÂN TẠO (AI)
- * Bản quyền: Thạc sĩ Nguyễn Văn Cần & THCS Thủy Phương, Thành phố Huế
- * Tổng số câu hỏi: 28 câu (18 MCQ + 4 TF + 6 SHORT)
- */
-
 // =========================================================================
-// PHẦN I. TRẮC NGHIỆM ĐA LỰA CHỌN (18 CÂU)
+// NGÂN HÀNG CÂU HỎI CHUẨN CẤU TRÚC HUE SMARTTEST 7991 (CHỦ ĐỀ ĐẠO ĐỨC AI)
 // =========================================================================
-"htsd_2026": {
+const ALL_BANKS = {
+  "htsd_2026": {
     mcq: [
       {
-    id: "AI_MCQ.01",
-    q: "Hành vi nào sau đây thể hiện việc sử dụng AI có đạo đức và văn hóa học đường?",
-    a: [
-      "Giấu kín việc dùng AI để làm văn.",
-      "Khai báo rõ việc có sử dụng AI.",
-      "Dùng AI mạo danh giáo viên dạy học.",
-      "Đưa thông tin bí mật trường lên AI."
+        id: "AI_MCQ.01",
+        q: "Hành vi nào sau đây thể hiện việc sử dụng AI có đạo đức và văn hóa học đường?",
+        o: [
+          "Giấu kín việc dùng AI để làm văn.",
+          "Khai báo rõ việc có sử dụng AI.",
+          "Dùng AI mạo danh giáo viên dạy học.",
+          "Đưa thông tin bí mật trường lên AI."
+        ],
+        a: "Khai báo rõ việc có sử dụng AI.",
+        e: "Phương án B đúng vì việc minh bạch, trung thực khai báo nguồn và sự hỗ trợ của AI thể hiện tính liêm chính học thuật và đạo đức học đường. Phương án A vi phạm tính trung thực; C vi phạm đạo đức và quy định pháp luật về mạo danh; D vi phạm an toàn thông tin của nhà trường."
+      },
+      {
+        id: "AI_MCQ.02",
+        q: "Khi một ứng dụng AI yêu cầu nhập mật khẩu cá nhân để tiếp tục, học sinh nên xử lí thế nào?",
+        o: [
+          "Nhập ngay mật khẩu cá nhân của mình.",
+          "Từ chối và tuyệt đối không cung cấp.",
+          "Nhập mật khẩu tài khoản của bạn thân.",
+          "Đăng tải mật khẩu lên nhóm học tập."
+        ],
+        a: "Từ chối và tuyệt đối không cung cấp.",
+        e: "Phương án B đúng vì mật khẩu là thông tin bảo mật tuyệt đối, việc cung cấp cho bên thứ ba hoặc ứng dụng AI lạ tiềm ẩn nguy cơ mất tài khoản và rò rỉ dữ liệu cá nhân. Các phương án A, C, D đều gây nguy cơ mất an toàn thông tin nghiêm trọng."
+      },
+      {
+        id: "AI_MCQ.03",
+        q: "Thông tin nào sau đây thuộc nhóm dữ liệu cá nhân cần bảo vệ nghiêm ngặt?",
+        o: [
+          "Địa chỉ nhà riêng và hình ảnh gia đình.",
+          "Tên một bài thơ trong sách Ngữ văn.",
+          "Lời bài hát trong chương trình Âm nhạc.",
+          "Bảng cửu chương trong sách môn Toán."
+        ],
+        a: "Địa chỉ nhà riêng và hình ảnh gia đình.",
+        e: "Phương án A đúng vì địa chỉ nhà riêng và hình ảnh gia đình là thông tin định danh đời tư nhạy cảm, cần được bảo vệ nghiêm ngặt. B, C, D là các tri thức công cộng phổ biến trong sách giáo khoa, không phải dữ liệu cá nhân."
+      },
+      {
+        id: "AI_MCQ.04",
+        q: "Khi gặp một thông tin mới do chatbot AI đưa ra, thao tác an toàn nhất là gì?",
+        o: [
+          "Kiểm chứng lại với nguồn tin cậy.",
+          "Chia sẻ ngay lên các trang mạng xã hội.",
+          "Tin tưởng tuyệt đối kết quả của máy.",
+          "Bỏ qua không cần suy ngẫm hay kiểm tra."
+        ],
+        a: "Kiểm chứng lại với nguồn tin cậy.",
+        e: "Phương án A đúng vì AI có thể đưa ra kết quả ảo giác (hallucination) hoặc dữ liệu chưa được kiểm chứng, người dùng bắt buộc phải đối chiếu với tài liệu chính thống. Các phương án B, C, D đều thiếu tư duy phản biện và dễ tiếp tay lan truyền thông tin sai lệch."
+      },
+      {
+        id: "AI_MCQ.05",
+        q: "Hành động nào sau đây là lạm dụng AI và vi phạm tính trung thực trong học tập?",
+        o: [
+          "Tra cứu nghĩa một từ vựng tiếng Anh.",
+          "Luyện nghe phát âm một câu giao tiếp.",
+          "Nhờ AI viết hộ bài thu hoạch nộp cô.",
+          "Tìm kiếm gợi ý ý tưởng làm bài tập."
+        ],
+        a: "Nhờ AI viết hộ bài thu hoạch nộp cô.",
+        e: "Phương án C đúng vì nhờ AI viết toàn bộ bài làm thay mình rồi nộp là hành vi gian lận học thuật, không phản ánh năng lực thực chất. A, B, D là các hình thức khai thác AI làm công cụ hỗ trợ học tập tích cực và phù hợp."
+      },
+      {
+        id: "AI_MCQ.06",
+        q: "Trong việc sử dụng hệ thống AI, chủ thể nào chịu trách nhiệm cuối cùng về kết quả?",
+        o: [
+          "Con người trực tiếp sử dụng AI.",
+          "Hệ điều hành đang chạy trên máy tính.",
+          "Thiết bị máy tính cá nhân người dùng.",
+          "Nhà cung cấp dịch vụ mạng Internet."
+        ],
+        a: "Con người trực tiếp sử dụng AI.",
+        e: "Phương án A đúng vì AI chỉ là công cụ hỗ trợ tính toán và xử lí thông tin; con người là chủ thể đưa ra quyết định, kiểm duyệt nội dung và chịu trách nhiệm pháp lí, đạo đức cuối cùng. B, C, D là các thành phần công nghệ trung gian."
+      },
+      {
+        id: "AI_MCQ.07",
+        q: "Khi chuẩn bị dữ liệu dạy cho AI, việc làm nào sau đây vi phạm đạo đức số?",
+        o: [
+          "Sử dụng kho ảnh mở miễn phí trên mạng.",
+          "Tự vẽ tranh minh họa bằng tay cá nhân.",
+          "Lén lấy ảnh riêng tư của người khác.",
+          "Thu âm giọng đọc bài của chính bản thân."
+        ],
+        a: "Lén lấy ảnh riêng tư của người khác.",
+        e: "Phương án C đúng vì việc tự ý thu thập và sử dụng hình ảnh riêng tư của người khác khi chưa được phép là vi phạm quyền riêng tư và đạo đức số. A, B, D đều là các nguồn dữ liệu hợp pháp và có bản quyền rõ ràng."
+      },
+      {
+        id: "AI_MCQ.08",
+        q: "Hiện tượng AI đưa ra kết quả thiên lệch, bất công đối với xã hội bắt nguồn từ đâu?",
+        o: [
+          "Thiết bị máy tính bị nóng vi xử lý.",
+          "Do dữ liệu huấn luyện bị thiên kiến.",
+          "Màn hình máy tính có độ tương phản cao.",
+          "Tốc độ kết nối mạng Internet bị chập chờn."
+        ],
+        a: "Do dữ liệu huấn luyện bị thiên kiến.",
+        e: "Phương án B đúng vì AI học từ tập dữ liệu được nạp vào; nếu dữ liệu huấn luyện chứa các định kiến xã hội hoặc mất cân bằng mẫu, mô hình sẽ học và tái hiện lại các thiên kiến đó. A, C, D là yếu tố kĩ thuật phần cứng và đường truyền mạng."
+      },
+      {
+        id: "AI_MCQ.09",
+        q: "Hành động nào sau đây góp phần xây dựng môi trường mạng an toàn khi dùng AI?",
+        o: [
+          "Báo cáo các nội dung độc hại phát hiện.",
+          "Cài thử nghiệm các mã độc vào ứng dụng AI.",
+          "Gửi tin nhắn rác hàng loạt qua chatbot.",
+          "Thu thập dữ liệu các bạn đưa lên AI."
+        ],
+        a: "Báo cáo các nội dung độc hại phát hiện.",
+        e: "Phương án A đúng vì chủ động phát hiện và báo cáo các nội dung xấu độc giúp nhà phát triển ngăn chặn nguy cơ và xây dựng môi trường mạng lành mạnh. B, C, D là các hành vi phá hoại, quấy rối và xâm phạm đời tư."
+      },
+      {
+        id: "AI_MCQ.10",
+        q: "Khi làm sản phẩm có dùng hình minh họa do AI tạo ra, hành vi nào tôn trọng bản quyền?",
+        o: [
+          "Ghi chú rõ nguồn tranh do AI vẽ.",
+          "Tự nhận tác phẩm do chính tay mình vẽ.",
+          "Dùng phần mềm xóa chữ ký nguồn ảnh.",
+          "Nói dối là tranh vẽ của họa sĩ nổi tiếng."
+        ],
+        a: "Ghi chú rõ nguồn tranh do AI vẽ.",
+        e: "Phương án A đúng vì ghi rõ xuất xứ bức tranh được tạo bởi AI thể hiện sự minh bạch, liêm chính và tôn trọng chuẩn mực bản quyền. B, C, D đều là các hành vi gian dối, vi phạm bản quyền tác giả."
+      },
+      {
+        id: "AI_MCQ.11",
+        q: "Vì sao con người cần luôn nắm giữ quyền ra quyết định cuối cùng khi dùng AI?",
+        o: [
+          "Nhằm bảo đảm an toàn và tính nhân văn.",
+          "Giúp máy tính tiết kiệm được năng lượng.",
+          "Để phần mềm AI không bị quá tải bộ nhớ.",
+          "Vì pháp luật cấm AI xử lí dữ liệu lớn."
+        ],
+        a: "Nhằm bảo đảm an toàn và tính nhân văn.",
+        e: "Phương án A đúng vì AI không có ý thức đạo đức và sự thấu cảm; con người cần kiểm soát để mọi quyết định luôn công bằng, nhân văn và an toàn cho cộng đồng. B, C, D không phản ánh mục tiêu đạo đức và quyền tự chủ của con người."
+      },
+      {
+        id: "AI_MCQ.12",
+        q: "Khi phát hiện một ứng dụng AI liên tục đưa thông tin sai sự thật, học sinh nên làm gì?",
+        o: [
+          "Ngừng dùng và báo ngay cho người lớn.",
+          "Gửi đường dẫn rủ bạn bè cùng sử dụng.",
+          "Tải phần mềm đó cài vào máy tính bạn.",
+          "Viết bài chia sẻ ca ngợi ứng dụng đó."
+        ],
+        a: "Ngừng dùng và báo ngay cho người lớn.",
+        e: "Phương án A đúng vì dừng sử dụng giúp tránh tiếp nhận thông tin độc hại và báo cáo kịp thời cho thầy cô, cha mẹ để có biện pháp ngăn chặn. B, C, D là hành động tiếp tay lan truyền nguồn tin sai trái."
+      },
+      {
+        id: "AI_MCQ.13",
+        q: "Công nghệ AI tạo ra hình ảnh hoặc video giả mạo người thật rất tinh vi gọi là gì?",
+        o: [
+          "Deepfake.",
+          "Phần mềm độc hại.",
+          "Dữ liệu lớn.",
+          "Trình duyệt web."
+        ],
+        a: "Deepfake.",
+        e: "Phương án A đúng vì Deepfake là công nghệ AI sử dụng mạng học sâu để tổng hợp, giả mạo hình ảnh, giọng nói của người thật rất tinh vi. B, C, D là các khái niệm công nghệ thông tin khác."
+      },
+      {
+        id: "AI_MCQ.14",
+        q: "Việc dùng AI làm giả giọng nói người khác gọi điện vay tiền là hành vi gì?",
+        o: [
+          "Một trò đùa vui không có hại.",
+          "Hành vi lừa đảo vi phạm pháp luật.",
+          "Hoạt động nghiên cứu công nghệ số.",
+          "Phương thức giao tiếp thông minh."
+        ],
+        a: "Hành vi lừa đảo vi phạm pháp luật.",
+        e: "Phương án B đúng vì việc mạo danh người khác để lừa tiền người thân là hành vi lừa đảo chiếm đoạt tài sản, vi phạm nghiêm trọng cả đạo đức và pháp luật. A, C, D cố tình bao biện cho hành vi vi phạm."
+      },
+      {
+        id: "AI_MCQ.15",
+        q: "Trách nhiệm phải giải thích rõ cách dùng AI và chịu trách nhiệm về bài làm gọi là gì?",
+        o: [
+          "Trách nhiệm pháp lý quốc tế.",
+          "Quyền miễn trừ của người dùng.",
+          "Trách nhiệm giải trình học thuật.",
+          "Quyền sở hữu thương mại điện tử."
+        ],
+        a: "Trách nhiệm giải trình học thuật.",
+        e: "Phương án C đúng vì trách nhiệm giải trình học thuật yêu cầu người học phải công khai công cụ hỗ trợ và chịu trách nhiệm về tính xác thực, liêm chính của sản phẩm học tập. A, B, D không phản ánh quy tắc đạo đức học đường này."
+      },
+      {
+        id: "AI_MCQ.16",
+        q: "Lĩnh vực nào đòi hỏi sự thấu cảm sâu sắc nên AI không thể thay thế hoàn toàn con người?",
+        o: [
+          "Dạy học và bồi dưỡng nhân cách.",
+          "Quét mã vạch sản phẩm tiêu dùng.",
+          "Phát hiện lỗi chính tả văn bản tự động.",
+          "Thống kê số lượng mưa trong năm."
+        ],
+        a: "Dạy học và bồi dưỡng nhân cách.",
+        e: "Phương án A đúng vì việc giáo dục và bồi dưỡng nhân cách học sinh đòi hỏi sự yêu thương, thấu cảm và tương tác nhân văn sâu sắc - điều mà máy móc không có. B, C, D là các công việc mang tính kĩ thuật thuần túy mà máy móc thực hiện rất tốt."
+      },
+      {
+        id: "AI_MCQ.17",
+        q: "Hậu quả nghiêm trọng nhất khi học sinh hoàn toàn ỷ lại vào các công cụ AI là gì?",
+        o: [
+          "Giảm dung lượng pin của điện thoại.",
+          "Bị suy giảm tư duy phản biện độc lập.",
+          "Tốc độ gõ phím máy tính bị chậm đi.",
+          "Thiết bị máy tính bị hao mòn vi mạch."
+        ],
+        a: "Bị suy giảm tư duy phản biện độc lập.",
+        e: "Phương án B đúng vì khi không chịu suy nghĩ mà lệ thuộc vào AI, năng lực tư duy phản biện, óc sáng tạo và khả năng giải quyết vấn đề độc lập của học sinh sẽ bị thui chột. A, C, D chỉ là các yếu tố kĩ thuật ngoại cảnh."
+      },
+      {
+        id: "AI_MCQ.18",
+        q: "Khi thiết kế một chatbot học đường, điều nào cần tuyệt đối tránh về mặt đạo đức?",
+        o: [
+          "Sử dụng phông chữ tiếng Việt chuẩn hóa.",
+          "Cung cấp câu trả lời xúc phạm người khác.",
+          "Hướng dẫn nội quy của nhà trường cho bạn.",
+          "Thông báo lịch học cho các lớp hàng tuần."
+        ],
+        a: "Cung cấp câu trả lời xúc phạm người khác.",
+        e: "Phương án B đúng vì hành vi xúc phạm, công kích người khác vi phạm đạo đức số và quy tắc ứng xử học đường. A, C, D là các tính năng chuẩn mực, hữu ích phục vụ môi trường giáo dục."
+      }
     ],
-    c: 1,
-    ex: "Phương án B đúng vì việc minh bạch, trung thực khai báo nguồn và sự hỗ trợ của AI thể hiện tính liêm chính học thuật và đạo đức học đường. Phương án A vi phạm tính trung thực; C vi phạm đạo đức và quy định pháp luật về mạo danh; D vi phạm an toàn thông tin của nhà trường."
-  },
-  {
-    id: "AI_MCQ.02",
-    q: "Khi một ứng dụng AI yêu cầu nhập mật khẩu cá nhân để tiếp tục, học sinh nên xử lí thế nào?",
-    a: [
-      "Nhập ngay mật khẩu cá nhân của mình.",
-      "Từ chối và tuyệt đối không cung cấp.",
-      "Nhập mật khẩu tài khoản của bạn thân.",
-      "Đăng tải mật khẩu lên nhóm học tập."
-    ],
-    c: 1,
-    ex: "Phương án B đúng vì mật khẩu là thông tin bảo mật tuyệt đối, việc cung cấp cho bên thứ ba hoặc ứng dụng AI lạ tiềm ẩn nguy cơ mất tài khoản và rò rỉ dữ liệu cá nhân. Các phương án A, C, D đều gây nguy cơ mất an toàn thông tin nghiêm trọng."
-  },
-  {
-    id: "AI_MCQ.03",
-    q: "Thông tin nào sau đây thuộc nhóm dữ liệu cá nhân cần bảo vệ nghiêm ngặt?",
-    a: [
-      "Địa chỉ nhà riêng và hình ảnh gia đình.",
-      "Tên một bài thơ trong sách Ngữ văn.",
-      "Lời bài hát trong chương trình Âm nhạc.",
-      "Bảng cửu chương trong sách môn Toán."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì địa chỉ nhà riêng và hình ảnh gia đình là thông tin định danh đời tư nhạy cảm, cần được bảo vệ nghiêm ngặt. B, C, D là các tri thức công cộng phổ biến trong sách giáo khoa, không phải dữ liệu cá nhân."
-  },
-  {
-    id: "AI_MCQ.04",
-    q: "Khi gặp một thông tin mới do chatbot AI đưa ra, thao tác an toàn nhất là gì?",
-    a: [
-      "Kiểm chứng lại với nguồn tin cậy.",
-      "Chia sẻ ngay lên các trang mạng xã hội.",
-      "Tin tưởng tuyệt đối kết quả của máy.",
-      "Bỏ qua không cần suy ngẫm hay kiểm tra."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì AI có thể đưa ra kết quả ảo giác (hallucination) hoặc dữ liệu chưa được kiểm chứng, người dùng bắt buộc phải đối chiếu với tài liệu chính thống. Các phương án B, C, D đều thiếu tư duy phản biện và dễ tiếp tay lan truyền thông tin sai lệch."
-  },
-  {
-    id: "AI_MCQ.05",
-    q: "Hành động nào sau đây là lạm dụng AI và vi phạm tính trung thực trong học tập?",
-    a: [
-      "Tra cứu nghĩa một từ vựng tiếng Anh.",
-      "Luyện nghe phát âm một câu giao tiếp.",
-      "Nhờ AI viết hộ bài thu hoạch nộp cô.",
-      "Tìm kiếm gợi ý ý tưởng làm bài tập."
-    ],
-    c: 2,
-    ex: "Phương án C đúng vì nhờ AI viết toàn bộ bài làm thay mình rồi nộp là hành vi gian lận học thuật, không phản ánh năng lực thực chất. A, B, D là các hình thức khai thác AI làm công cụ hỗ trợ học tập tích cực và phù hợp."
-  },
-  {
-    id: "AI_MCQ.06",
-    q: "Trong việc sử dụng hệ thống AI, chủ thể nào chịu trách nhiệm cuối cùng về kết quả?",
-    a: [
-      "Con người trực tiếp sử dụng AI.",
-      "Hệ điều hành đang chạy trên máy tính.",
-      "Thiết bị máy tính cá nhân người dùng.",
-      "Nhà cung cấp dịch vụ mạng Internet."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì AI chỉ là công cụ hỗ trợ tính toán và xử lí thông tin; con người là chủ thể đưa ra quyết định, kiểm duyệt nội dung và chịu trách nhiệm pháp lí, đạo đức cuối cùng. B, C, D là các thành phần công nghệ trung gian."
-  },
-  {
-    id: "AI_MCQ.07",
-    q: "Khi chuẩn bị dữ liệu dạy cho AI, việc làm nào sau đây vi phạm đạo đức số?",
-    a: [
-      "Sử dụng kho ảnh mở miễn phí trên mạng.",
-      "Tự vẽ tranh minh họa bằng tay cá nhân.",
-      "Lén lấy ảnh riêng tư của người khác.",
-      "Thu âm giọng đọc bài của chính bản thân."
-    ],
-    c: 2,
-    ex: "Phương án C đúng vì việc tự ý thu thập và sử dụng hình ảnh riêng tư của người khác khi chưa được phép là vi phạm quyền riêng tư và đạo đức số. A, B, D đều là các nguồn dữ liệu hợp pháp và có bản quyền rõ ràng."
-  },
-  {
-    id: "AI_MCQ.08",
-    q: "Hiện tượng AI đưa ra kết quả thiên lệch, bất công đối với xã hội bắt nguồn từ đâu?",
-    a: [
-      "Thiết bị máy tính bị nóng vi xử lý.",
-      "Do dữ liệu huấn luyện bị thiên kiến.",
-      "Màn hình máy tính có độ tương phản cao.",
-      "Tốc độ kết nối mạng Internet bị chập chờn."
-    ],
-    c: 1,
-    ex: "Phương án B đúng vì AI học từ tập dữ liệu được nạp vào; nếu dữ liệu huấn luyện chứa các định kiến xã hội hoặc mất cân bằng mẫu, mô hình sẽ học và tái hiện lại các thiên kiến đó. A, C, D là yếu tố kĩ thuật phần cứng và đường truyền mạng."
-  },
-  {
-    id: "AI_MCQ.09",
-    q: "Hành động nào sau đây góp phần xây dựng môi trường mạng an toàn khi dùng AI?",
-    a: [
-      "Báo cáo các nội dung độc hại phát hiện.",
-      "Cài thử nghiệm các mã độc vào ứng dụng AI.",
-      "Gửi tin nhắn rác hàng loạt qua chatbot.",
-      "Thu thập dữ liệu các bạn đưa lên AI."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì chủ động phát hiện và báo cáo các nội dung xấu độc giúp nhà phát triển ngăn chặn nguy cơ và xây dựng môi trường mạng lành mạnh. B, C, D là các hành vi phá hoại, quấy rối và xâm phạm đời tư."
-  },
-  {
-    id: "AI_MCQ.10",
-    q: "Khi làm sản phẩm có dùng hình minh họa do AI tạo ra, hành vi nào tôn trọng bản quyền?",
-    a: [
-      "Ghi chú rõ nguồn tranh do AI vẽ.",
-      "Tự nhận tác phẩm do chính tay mình vẽ.",
-      "Dùng phần mềm xóa chữ ký nguồn ảnh.",
-      "Nói dối là tranh vẽ của họa sĩ nổi tiếng."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì ghi rõ xuất xứ bức tranh được tạo bởi AI thể hiện sự minh bạch, liêm chính và tôn trọng chuẩn mực bản quyền. B, C, D đều là các hành vi gian dối, vi phạm bản quyền tác giả."
-  },
-  {
-    id: "AI_MCQ.11",
-    q: "Vì sao con người cần luôn nắm giữ quyền ra quyết định cuối cùng khi dùng AI?",
-    a: [
-      "Nhằm bảo đảm an toàn và tính nhân văn.",
-      "Giúp máy tính tiết kiệm được năng lượng.",
-      "Để phần mềm AI không bị quá tải bộ nhớ.",
-      "Vì pháp luật cấm AI xử lí dữ liệu lớn."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì AI không có ý thức đạo đức và sự thấu cảm; con người cần kiểm soát để mọi quyết định luôn công bằng, nhân văn và an toàn cho cộng đồng. B, C, D không phản ánh mục tiêu đạo đức và quyền tự chủ của con người."
-  },
-  {
-    id: "AI_MCQ.12",
-    q: "Khi phát hiện một ứng dụng AI liên tục đưa thông tin sai sự thật, học sinh nên làm gì?",
-    a: [
-      "Ngừng dùng và báo ngay cho người lớn.",
-      "Gửi đường dẫn rủ bạn bè cùng sử dụng.",
-      "Tải phần mềm đó cài vào máy tính bạn.",
-      "Viết bài chia sẻ ca ngợi ứng dụng đó."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì dừng sử dụng giúp tránh tiếp nhận thông tin độc hại và báo cáo kịp thời cho thầy cô, cha mẹ để có biện pháp ngăn chặn. B, C, D là hành động tiếp tay lan truyền nguồn tin sai trái."
-  },
-  {
-    id: "AI_MCQ.13",
-    q: "Công nghệ AI tạo ra hình ảnh hoặc video giả mạo người thật rất tinh vi gọi là gì?",
-    a: [
-      "Deepfake.",
-      "Phần mềm độc hại.",
-      "Dữ liệu lớn.",
-      "Trình duyệt web."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì Deepfake là công nghệ AI sử dụng mạng học sâu để tổng hợp, giả mạo hình ảnh, giọng nói của người thật rất tinh vi. B, C, D là các khái niệm công nghệ thông tin khác."
-  },
-  {
-    id: "AI_MCQ.14",
-    q: "Việc dùng AI làm giả giọng nói người khác gọi điện vay tiền là hành vi gì?",
-    a: [
-      "Một trò đùa vui không có hại.",
-      "Hành vi lừa đảo vi phạm pháp luật.",
-      "Hoạt động nghiên cứu công nghệ số.",
-      "Phương thức giao tiếp thông minh."
-    ],
-    c: 1,
-    ex: "Phương án B đúng vì việc mạo danh người khác để lừa tiền người thân là hành vi lừa đảo chiếm đoạt tài sản, vi phạm nghiêm trọng cả đạo đức và pháp luật. A, C, D cố tình bao biện cho hành vi vi phạm."
-  },
-  {
-    id: "AI_MCQ.15",
-    q: "Trách nhiệm phải giải thích rõ cách dùng AI và chịu trách nhiệm về bài làm gọi là gì?",
-    a: [
-      "Trách nhiệm pháp lý quốc tế.",
-      "Quyền miễn trừ của người dùng.",
-      "Trách nhiệm giải trình học thuật.",
-      "Quyền sở hữu thương mại điện tử."
-    ],
-    c: 2,
-    ex: "Phương án C đúng vì trách nhiệm giải trình học thuật yêu cầu người học phải công khai công cụ hỗ trợ và chịu trách nhiệm về tính xác thực, liêm chính của sản phẩm học tập. A, B, D không phản ánh quy tắc đạo đức học đường này."
-  },
-  {
-    id: "AI_MCQ.16",
-    q: "Lĩnh vực nào đòi hỏi sự thấu cảm sâu sắc nên AI không thể thay thế hoàn toàn con người?",
-    a: [
-      "Dạy học và bồi dưỡng nhân cách.",
-      "Quét mã vạch sản phẩm tiêu dùng.",
-      "Phát hiện lỗi chính tả văn bản tự động.",
-      "Thống kê số lượng mưa trong năm."
-    ],
-    c: 0,
-    ex: "Phương án A đúng vì việc giáo dục và bồi dưỡng nhân cách học sinh đòi hỏi sự yêu thương, thấu cảm và tương tác nhân văn sâu sắc - điều mà máy móc không có. B, C, D là các công việc mang tính kĩ thuật thuần túy mà máy móc thực hiện rất tốt."
-  },
-  {
-    id: "AI_MCQ.17",
-    q: "Hậu quả nghiêm trọng nhất khi học sinh hoàn toàn ỷ lại vào các công cụ AI là gì?",
-    a: [
-      "Giảm dung lượng pin của điện thoại.",
-      "Bị suy giảm tư duy phản biện độc lập.",
-      "Tốc độ gõ phím máy tính bị chậm đi.",
-      "Thiết bị máy tính bị hao mòn vi mạch."
-    ],
-    c: 1,
-    ex: "Phương án B đúng vì khi không chịu suy nghĩ mà lệ thuộc vào AI, năng lực tư duy phản biện, óc sáng tạo và khả năng giải quyết vấn đề độc lập của học sinh sẽ bị thui chột. A, C, D chỉ là các yếu tố kĩ thuật ngoại cảnh."
-  },
-  {
-    id: "AI_MCQ.18",
-    q: "Khi thiết kế một chatbot học đường, điều nào cần tuyệt đối tránh về mặt đạo đức?",
-    a: [
-      "Sử dụng phông chữ tiếng Việt chuẩn hóa.",
-      "Cung cấp câu trả lời xúc phạm người khác.",
-      "Hướng dẫn nội quy của nhà trường cho bạn.",
-      "Thông báo lịch học cho các lớp hàng tuần."
-    ],
-    c: 1,
-    ex: "Phương án B đúng vì hành vi xúc phạm, công kích người khác vi phạm đạo đức số và quy tắc ứng xử học đường. A, C, D là các tính năng chuẩn mực, hữu ích phục vụ môi trường giáo dục."
-  }
-];
 
-// =========================================================================
-// PHẦN II. TRẮC NGHIỆM ĐÚNG / SAI (4 CÂU)
-// =========================================================================
-const BANK_TF = [
-  {
-    id: "AI_TF.01",
-    q: "Xét các nhận định về nguồn gốc và bản chất của trí tuệ nhân tạo:",
-    items: [
-      "AI là sản phẩm khoa học do con người lập trình và điều khiển.",
-      "AI có cảm xúc và đời sống tinh thần giống hệt như con người.",
-      "Học sinh cần kiểm tra lại kết quả do AI cung cấp trước khi vận dụng.",
-      "Mọi công cụ AI trên Internet đều đảm bảo an toàn tuyệt đối cho người dùng."
+    tf: [
+      {
+        id: "AI_TF.01",
+        ctx: "Xét các nhận định về nguồn gốc và bản chất của trí tuệ nhân tạo:",
+        sts: [
+          { l: "a)", t: "AI là sản phẩm khoa học do con người lập trình và điều khiển.", a: true },
+          { l: "b)", t: "AI có cảm xúc và đời sống tinh thần giống hệt như con người.", a: false },
+          { l: "c)", t: "Học sinh cần kiểm tra lại kết quả do AI cung cấp trước khi vận dụng.", a: true },
+          { l: "d)", t: "Mọi công cụ AI trên Internet đều đảm bảo an toàn tuyệt đối cho người dùng.", a: false }
+        ],
+        e: "Ý a đúng vì AI do con người lập trình, điều khiển; Ý b sai vì AI không có ý thức, cảm xúc; Ý c đúng vì AI có thể sinh ảo giác thông tin, cần kiểm chứng; Ý d sai vì nhiều công cụ trôi nổi tiềm ẩn mã độc và rò rỉ dữ liệu."
+      },
+      {
+        id: "AI_TF.02",
+        ctx: "Xét các khía cạnh bảo vệ thông tin riêng tư của học sinh khi sử dụng AI:",
+        sts: [
+          { l: "a)", t: "Học sinh có thể tùy ý cung cấp mã số định danh cá nhân cho các chatbot.", a: false },
+          { l: "b)", t: "Lộ dữ liệu cá nhân có thể dẫn đến nguy cơ bị lừa đảo trên mạng.", a: true },
+          { l: "c)", t: "Người dùng có quyền từ chối cung cấp dữ liệu riêng tư nhạy cảm.", a: true },
+          { l: "d)", t: "Nền tảng AI được quyền tự do mua bán hình ảnh của trẻ em mà không cần xin phép.", a: false }
+        ],
+        e: "Ý a sai vì mã số định danh là dữ liệu bí mật; Ý b đúng vì dữ liệu lộ dễ bị kẻ xấu lợi dụng lừa đảo; Ý c đúng vì đó là quyền riêng tư hợp pháp; Ý d sai vì buôn bán dữ liệu trẻ em là vi phạm pháp luật nghiêm trọng."
+      },
+      {
+        id: "AI_TF.03",
+        ctx: "Về tính trung thực và đạo đức học tập khi dùng công cụ AI:",
+        sts: [
+          { l: "a)", t: "Dùng AI dịch thuật ngữ tiếng nước ngoài để học tập là điều phù hợp.", a: true },
+          { l: "b)", t: "Nhờ AI làm hộ toàn bộ bài kiểm tra giúp học sinh tự lập hơn trong học tập.", a: false },
+          { l: "c)", t: "Khai báo trung thực việc có dùng AI thể hiện thái độ học tập đúng đắn.", a: true },
+          { l: "d)", t: "Toàn bộ câu trả lời của AI luôn là chân lý và không bao giờ mắc lỗi.", a: false }
+        ],
+        e: "Ý a đúng vì AI hỗ trợ học ngôn ngữ rất tốt; Ý b sai vì làm bài hộ là gian lận học thuật, làm giảm tính tự lập; Ý c đúng vì liêm chính học thuật là giá trị cốt lõi; Ý d sai vì AI vẫn có thể sai sót, không phải chân lý."
+      },
+      {
+        id: "AI_TF.04",
+        ctx: "Về quyền tự chủ của con người khi tương tác với các hệ thống AI:",
+        sts: [
+          { l: "a)", t: "Con người phải luôn giữ quyền ra quyết định cuối cùng trong mọi việc hệ trọng.", a: true },
+          { l: "b)", t: "Có thể giao toàn bộ việc chấm điểm đạo đức học sinh cho phần mềm AI tự xử lí.", a: false },
+          { l: "c)", t: "Việc đối chiếu thông tin từ nhiều nguồn giúp ngăn ngừa các quyết định sai.", a: true },
+          { l: "d)", t: "Người vận hành hoàn toàn vô can khi hệ thống AI do mình dùng gây ra thiệt hại.", a: false }
+        ],
+        e: "Ý a đúng vì con người có trách nhiệm đạo đức và xã hội; Ý b sai vì đánh giá đạo đức cần sự thấu hiểu tâm lí sư phạm; Ý c đúng vì kiểm chứng đa nguồn hạn chế sai lệch; Ý d sai vì người vận hành phải chịu trách nhiệm pháp lí về công cụ mình sử dụng."
+      }
     ],
-    c: [true, false, true, false],
-    ex: "a) Đúng vì AI là sản phẩm công nghệ do con người nghiên cứu, tạo dựng và vận hành; b) Sai vì AI không có ý thức, cảm xúc hay đời sống tinh thần; c) Đúng vì AI có thể đưa ra kết quả ảo giác, cần kiểm chứng đối chiếu; d) Sai vì có nhiều công cụ AI trôi nổi chứa nguy cơ bảo mật và mã độc."
-  },
-  {
-    id: "AI_TF.02",
-    q: "Xét các khía cạnh bảo vệ thông tin riêng tư của học sinh khi sử dụng AI:",
-    items: [
-      "Học sinh có thể tùy ý cung cấp mã số định danh cá nhân cho các chatbot.",
-      "Lộ dữ liệu cá nhân có thể dẫn đến nguy cơ bị lừa đảo trên mạng.",
-      "Người dùng có quyền từ chối cung cấp dữ liệu riêng tư nhạy cảm.",
-      "Nền tảng AI được quyền tự do mua bán hình ảnh của trẻ em mà không cần xin phép."
-    ],
-    c: [false, true, true, false],
-    ex: "a) Sai vì số định danh cá nhân là dữ liệu bảo mật, tuyệt đối không tùy tiện cung cấp; b) Đúng vì lộ dữ liệu khiến kẻ xấu lợi dụng để mạo danh, lừa đảo; c) Đúng vì bảo vệ quyền riêng tư là quyền cơ bản của người dùng số; d) Sai vì tự ý mua bán dữ liệu trẻ em là hành vi vi phạm nghiêm trọng pháp luật."
-  },
-  {
-    id: "AI_TF.03",
-    q: "Về tính trung thực và đạo đức học tập khi dùng công cụ AI:",
-    items: [
-      "Dùng AI dịch thuật ngữ tiếng nước ngoài để học tập là điều phù hợp.",
-      "Nhờ AI làm hộ toàn bộ bài kiểm tra giúp học sinh tự lập hơn trong học tập.",
-      "Khai báo trung thực việc có dùng AI thể hiện thái độ học tập đúng đắn.",
-      "Toàn bộ câu trả lời của AI luôn là chân lý và không bao giờ mắc lỗi."
-    ],
-    c: [true, false, true, false],
-    ex: "a) Đúng vì AI hỗ trợ tra cứu ngôn ngữ rất hiệu quả; b) Sai vì nhờ AI làm bài hộ là gian lận học thuật, làm mất đi tính tự lập; c) Đúng vì liêm chính và trung thực học thuật luôn là giá trị cốt lõi; d) Sai vì AI vẫn có thể sai sót, không phải chân lý tuyệt đối."
-  },
-  {
-    id: "AI_TF.04",
-    q: "Về quyền tự chủ của con người khi tương tác với các hệ thống AI:",
-    items: [
-      "Con người phải luôn giữ quyền ra quyết định cuối cùng trong mọi việc hệ trọng.",
-      "Có thể giao toàn bộ việc chấm điểm đạo đức học sinh cho phần mềm AI tự xử lí.",
-      "Việc đối chiếu thông tin từ nhiều nguồn giúp ngăn ngừa các quyết định sai.",
-      "Người vận hành hoàn toàn vô can khi hệ thống AI do mình dùng gây ra thiệt hại."
-    ],
-    c: [true, false, true, false],
-    ex: "a) Đúng vì con người có lương tri và trách nhiệm xã hội nên phải giữ quyền quyết định; b) Sai vì đánh giá đạo đức học sinh cần sự thấu hiểu tâm lí sư phạm, máy móc không thể thay thế; c) Đúng vì kiểm chứng đa nguồn giúp hạn chế rủi ro sai sót; d) Sai vì người sử dụng/vận hành chịu trách nhiệm pháp lí và đạo đức đối với kết quả của AI."
-  }
-];
 
-// =========================================================================
-// PHẦN III. TRẮC NGHIỆM TRẢ LỜI NGẮN (6 CÂU)
-// =========================================================================
-const BANK_SHORT = [
-  {
-    id: "AI_SHORT.01",
-    q: "Cho các nhận định sau về nguồn gốc và giới hạn đạo đức của AI:\n(1) AI là sản phẩm khoa học do con người lập trình chỉ phục vụ học sinh.\n(2) AI có cảm xúc yêu thương và lòng vị tha giống hệt như một con người.\n(3) Con người luôn là chủ thể chịu trách nhiệm cuối cùng khi sử dụng AI.\n(4) Học sinh cần kiểm tra lại kết quả trước khi tiếp nhận thông tin từ AI.\n(5) Câu trả lời của AI trên internet có thể không chuẩn xác.\n(6) Được phép dùng AI tạo văn bản trêu chọc bạn bè trong giờ giải lao.\nHọc sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
-    c: "345",
-    ex: "Giải thích chi tiết: (1) Sai vì AI phục vụ toàn diện các lĩnh vực của đời sống xã hội; (2) Sai vì AI không có đời sống tâm hồn, cảm xúc; (3) Đúng vì con người có tư cách pháp nhân chịu trách nhiệm; (4) Đúng vì cần tinh thần phản biện, kiểm chứng; (5) Đúng vì AI vẫn tạo ra thông tin sai lệch; (6) Sai vì trêu chọc bạn bè qua AI là vi phạm văn hóa học đường. Các nhận định đúng gồm: 3, 4, 5."
-  },
-  {
-    id: "AI_SHORT.02",
-    q: "Cho các nhận định sau về bảo mật dữ liệu cá nhân khi tương tác với AI:\n(1) Mật khẩu và địa chỉ nhà riêng là dữ liệu cá nhân cần giữ kín.\n(2) Gửi ảnh chụp cá nhân nhạy cảm lên chatbot có nguy cơ bị lộ thông tin.\n(3) Người dùng có quyền từ chối cung cấp dữ liệu riêng tư cho phần mềm.\n(4) Nhập số thẻ căn cước vào trang web AI lạ là việc làm rất an toàn.\n(5) Nên báo ngay cho cha mẹ hoặc thầy cô khi phát hiện nguy cơ mất dữ liệu.\n(6) Trang web AI miễn phí có quyền tùy tiện phát tán ảnh cá nhân người dùng.\nHọc sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
-    c: "1235",
-    ex: "Giải thích chi tiết: (1), (2), (3), (5) là các quy tắc bảo mật dữ liệu cá nhân hoàn toàn chuẩn xác; (4) Sai vì nhập số căn cước vào web lạ gây nguy cơ rò rỉ danh tính nghiêm trọng; (6) Sai vì tùy tiện phát tán thông tin riêng tư là hành vi vi phạm pháp luật. Các nhận định đúng gồm: 1, 2, 3, 5."
-  },
-  {
-    id: "AI_SHORT.03",
-    q: "Cho các nhận định sau về tính trung thực học thuật khi học tập cùng AI:\n(1) Tra từ vựng tiếng Anh qua trợ lí AI là hình thức học tập đúng đắn.\n(2) Yêu cầu AI làm hộ toàn bộ bài viết thu hoạch để nộp thầy cô giáo.\n(3) Đối chiếu thông tin của AI với sách giáo khoa giúp hiểu bài sâu hơn.\n(4) Khai báo trung thực sự hỗ trợ của AI thể hiện tinh thần trách nhiệm.\n(5) Tin tưởng tuyệt đối câu trả lời của AI là cách học tập tốt nhất.\n(6) Tự nhận câu trả lời của máy tính là bài viết sáng tạo của riêng mình.\nHọc sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
-    c: "134",
-    ex: "Giải thích chi tiết: (1), (3), (4) thể hiện văn hóa ứng dụng công nghệ đúng đắn và liêm chính học thuật; (2) và (6) là hành vi đạo văn, gian lận; (5) Sai vì tin tưởng mù quáng vào AI làm thui chột tư duy phản biện. Các nhận định đúng gồm: 1, 3, 4."
-  },
-  {
-    id: "AI_SHORT.04",
-    q: "Cho các nhận định sau về quyền tự chủ của con người khi kiểm soát AI:\n(1) Con người luôn cần giữ quyền ra quyết định cuối cùng trong công việc.\n(2) Để máy móc tự động quyết định mức kỷ luật học sinh là điều nhân văn.\n(3) Thói quen kiểm chứng nguồn tin giúp tránh quyết định sai lầm do AI.\n(4) Khi kết quả AI gây hại xã hội, người vận hành hoàn toàn không liên can.\n(5) Con người cần ngăn chặn các dự án thiết kế công cụ AI có tính phá hoại.\n(6) Cung cấp vị trí học tập của lớp liên tục cho ứng dụng AI mà không hỏi ý kiến.\nHọc sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
-    c: "135",
-    ex: "Giải thích chi tiết: (1), (3), (5) là các nhận định chuẩn xác khẳng định vị thế làm chủ công nghệ của con người; (2) Sai vì việc kỉ luật đòi hỏi sự thấu cảm sư phạm; (4) Sai vì người vận hành phải chịu trách nhiệm pháp lí; (6) Sai vì tự ý phát tán thông tin định vị của tập thể vi phạm an toàn riêng tư. Các nhận định đúng gồm: 1, 3, 5."
-  },
-  {
-    id: "AI_SHORT.05",
-    q: "Cho đến 01/10/2026, toàn Thành phố Huế có bao nhiêu xã, phường?",
-    c: "40",
-    ex: "Giải thích: Theo Nghị quyết của Ủy ban Thường vụ Quốc hội và đề án xây dựng Thành phố Huế trực thuộc Trung ương, toàn Thành phố Huế được sắp xếp tổ chức thành 40 xã, phường."
-  },
-  {
-    id: "AI_SHORT.06",
-    q: "Tính đến 01/10/2026, Trường THCS Thanh Thuỷ có bao nhiêu Anh / Chị phụ trách Đội và các Anh / Chị tổng phụ trách Đội (Hint: Including the Chief Pioneer Leader, the pioneer leaders of satellite campuses, and classroom pioneer leaders).",
-    c: "72",
-    ex: "Giải thích: Tổng số Anh/Chị tổng phụ trách Đội, phụ trách Đội tại các cơ sở cùng giáo viên chủ nhiệm - phụ trách chi đội các lớp học của trường tính đến ngày 01/10/2026 là 72 người."
-  }
-];
+    short: [
+      {
+        id: "AI_SHORT.01",
+        q: "Cho các nhận định sau về nguồn gốc và giới hạn đạo đức của AI:
+            (1) AI là sản phẩm khoa học do con người lập trình chỉ phục vụ học sinh.
 
-// Đóng gói ngân hàng phục vụ Game Engine của Hue Smarttest 7991
-window.HUE_SMARTTEST_BANK = {
-  mcq: BANK_MCQ,
-  tf: BANK_TF,
-  short: BANK_SHORT
-};
 
-function autoScaleApp() {
-    const container = document.querySelector('.container');
-    const wrapper = document.getElementById('app-wrapper');
-    const adminScreen = document.getElementById('screen-admin');
-    const reviewArea = document.getElementById('review-area');
-    if (!container || !wrapper) return;
+(2) AI có cảm xúc yêu thương và lòng vị tha giống hệt như một con người.
 
-    const isReviewing = reviewArea && reviewArea.style.display === 'block';
-    
-    // NẾU TÍNH NĂNG THU PHÓNG BỊ TẮT TỪ ADMIN HOẶC ĐANG Ở MÀN HÌNH REVIEW/ADMIN/MOBILE
-    if (!isAutoScaleEnabled || (adminScreen && adminScreen.classList.contains('active')) || window.innerWidth <= 768 || isReviewing) {
-        container.style.transform = `none`; wrapper.style.height = 'auto'; wrapper.style.overflow = 'visible';
-        container.style.marginBottom = '50px'; return; 
-    }
 
-    container.style.transform = `none`; wrapper.style.height = 'auto'; wrapper.style.overflow = 'visible'; container.style.marginBottom = '0px';
-    void container.offsetHeight; 
-    const naturalHeight = container.offsetHeight + 20, windowHeight = window.innerHeight;
+(3) Con người luôn là chủ thể chịu trách nhiệm cuối cùng khi sử dụng AI.
 
-    if (naturalHeight > windowHeight) {
-        const ratio = windowHeight / naturalHeight; container.style.transform = `scale(${ratio})`;
-        wrapper.style.height = `${windowHeight}px`; wrapper.style.overflow = 'hidden'; 
-    } else {
-        container.style.transform = `scale(1)`; wrapper.style.height = `${windowHeight}px`; wrapper.style.overflow = 'hidden'; 
-    }
+
+(4) Học sinh cần kiểm tra lại kết quả trước khi tiếp nhận thông tin từ AI.
+
+
+(5) Câu trả lời của AI trên internet có thể không chuẩn xác.
+
+
+(6) Được phép dùng AI tạo văn bản trêu chọc bạn bè trong giờ giải lao.
+
+
+Học sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
+a: "345",
+e: "Nhận định đúng là 3, 4, 5. (1) sai vì AI phục vụ toàn xã hội; (2) sai vì AI không có cảm xúc; (6) sai vì dùng AI trêu chọc xúc phạm bạn bè vi phạm văn hóa học đường."
+},
+{
+id: "AI_SHORT.02",
+q: "Cho các nhận định sau về bảo mật dữ liệu cá nhân khi tương tác với AI:
+
+
+(1) Mật khẩu và địa chỉ nhà riêng là dữ liệu cá nhân cần giữ kín.
+
+
+(2) Gửi ảnh chụp cá nhân nhạy cảm lên chatbot có nguy cơ bị lộ thông tin.
+
+
+(3) Người dùng có quyền từ chối cung cấp dữ liệu riêng tư cho phần mềm.
+
+
+(4) Nhập số thẻ căn cước vào trang web AI lạ là việc làm rất an toàn.
+
+
+(5) Nên báo ngay cho cha mẹ hoặc thầy cô khi phát hiện nguy cơ mất dữ liệu.
+
+
+(6) Trang web AI miễn phí có quyền tùy tiện phát tán ảnh cá nhân người dùng.
+
+
+Học sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
+a: "1235",
+e: "Nhận định đúng là 1, 2, 3, 5. (4) sai vì nhập thẻ căn cước vào web lạ gây nguy cơ rò rỉ danh tính nghiêm trọng; (6) sai vì tự tiện phát tán thông tin người dùng là vi phạm pháp luật."
+},
+{
+id: "AI_SHORT.03",
+q: "Cho các nhận định sau về tính trung thực học thuật khi học tập cùng AI:
+
+
+(1) Tra từ vựng tiếng Anh qua trợ lí AI là hình thức học tập đúng đắn.
+
+
+(2) Yêu cầu AI làm hộ toàn bộ bài viết thu hoạch để nộp thầy cô giáo.
+
+
+(3) Đối chiếu thông tin của AI với sách giáo khoa giúp hiểu bài sâu hơn.
+
+
+(4) Khai báo trung thực sự hỗ trợ của AI thể hiện tinh thần trách nhiệm.
+
+
+(5) Tin tưởng tuyệt đối câu trả lời của AI là cách học tập tốt nhất.
+
+
+(6) Tự nhận câu trả lời của máy tính là bài viết sáng tạo của riêng mình.
+
+
+Học sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
+a: "134",
+e: "Nhận định đúng là 1, 3, 4. (2) và (6) là hành vi gian lận học thuật, đạo văn; (5) sai vì tin tưởng mù quáng vào AI làm suy giảm tư duy phản biện."
+},
+{
+id: "AI_SHORT.04",
+q: "Cho các nhận định sau về quyền tự chủ của con người khi kiểm soát AI:
+
+
+(1) Con người luôn cần giữ quyền ra quyết định cuối cùng trong công việc.
+
+
+(2) Để máy móc tự động quyết định mức kỷ luật học sinh là điều nhân văn.
+
+
+(3) Thói quen kiểm chứng nguồn tin giúp tránh quyết định sai lầm do AI.
+
+
+(4) Khi kết quả AI gây hại xã hội, người vận hành hoàn toàn không liên can.
+
+
+(5) Con người cần ngăn chặn các dự án thiết kế công cụ AI có tính phá hoại.
+
+
+(6) Cung cấp vị trí học tập của lớp liên tục cho ứng dụng AI mà không hỏi ý kiến.
+
+
+Học sinh chọn các nhận định đúng và ghi dãy số theo thứ tự tăng dần.",
+a: "135",
+e: "Nhận định đúng là 1, 3, 5. (2) sai vì kỉ luật đòi hỏi sự thấu cảm sư phạm; (4) sai vì người vận hành chịu trách nhiệm pháp lí; (6) sai vì tự ý chia sẻ định vị lớp học xâm phạm quyền riêng tư."
+},
+{
+id: "AI_SHORT.05",
+q: "Cho đến 01/10/2026, toàn Thành phố Huế có bao nhiêu xã, phường?",
+a: "40",
+e: "Theo Nghị quyết của Ủy ban Thường vụ Quốc hội và đề án xây dựng Thành phố Huế trực thuộc Trung ương, toàn Thành phố Huế được sắp xếp tổ chức thành 40 xã, phường."
+},
+{
+id: "AI_SHORT.06",
+q: "Tính đến 01/10/2026, Trường THCS Thanh Thuỷ có bao nhiêu Anh / Chị phụ trách Đội và các Anh / Chị tổng phụ trách Đội (Hint: Including the Chief Pioneer Leader, the pioneer leaders of satellite campuses, and classroom pioneer leaders).",
+a: "72",
+e: "Tổng số Anh/Chị tổng phụ trách Đội, phụ trách Đội tại các cơ sở cùng giáo viên chủ nhiệm - phụ trách chi đội các lớp học của nhà trường tính đến ngày 01/10/2026 là 72 người."
 }
-window.addEventListener('resize', autoScaleApp); autoScaleApp();
-
-document.addEventListener('copy', (e) => { e.preventDefault(); return false; });
-
-const closeOverlay = (modal) => {
-    modal.style.display = 'none';
-    if (modal.id === 'delete-auth-modal') { pendingAuthAction = null; currentDeleteId = null; importedStudentsCache = []; document.getElementById('delete-pw').value = ''; document.getElementById('delete-email').value = ''; document.getElementById('file-import-students').value = ''; }
-    if (modal.id === 'admin-auth-modal') { document.getElementById('admin-pw').value = ''; }
+]
+}
 };
-
-document.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'x' || e.key === 'u' || e.key === 's'))) {
-        e.preventDefault(); return false;
-    }
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay').forEach(modal => {
-            if (modal.style.display === 'flex' || modal.style.display === 'block') {
-                closeOverlay(modal);
-            }
-        });
-    }
-    if (e.key === 'Enter') {
-        if (e.target.tagName.toLowerCase() === 'textarea') return;
-        const adminModal = document.getElementById('admin-auth-modal');
-        if (adminModal.style.display === 'flex' || adminModal.style.display === 'block') {
-            document.getElementById('btn-auth-confirm').click();
-            return; 
-        }
-        const deleteModal = document.getElementById('delete-auth-modal');
-        if (deleteModal.style.display === 'flex' || deleteModal.style.display === 'block') {
-            document.getElementById('btn-delete-confirm').click();
-            return;
-        }
-        const finishModal = document.getElementById('confirm-finish-modal');
-        if (finishModal.style.display === 'flex' || finishModal.style.display === 'block') {
-            document.getElementById('btn-modal-confirm').click();
-            return;
-        }
-        const reportModal = document.getElementById('report-modal');
-        if (reportModal.style.display === 'flex' || reportModal.style.display === 'block') {
-            document.getElementById('btn-report-submit').click();
-            return;
-        }
-    }
-}, true);
-
-document.querySelectorAll('.modal-overlay').forEach(modal => {
-    modal.addEventListener('mousedown', (e) => {
-        if (e.target === modal && modal.id !== 'image-viewer-modal') { 
-            closeOverlay(modal);
-        }
-    });
-});
-
-document.addEventListener('paste', function(e) {
-    if (document.getElementById('report-modal').style.display === 'flex' || document.getElementById('report-modal').style.display === 'block') {
-        const items = (e.clipboardData || e.originalEvent.clipboardData).items;
-        for (let index in items) {
-            const item = items[index];
-            if (item.kind === 'file' && item.type.indexOf('image/') !== -1) {
-                const blob = item.getAsFile();
-                processImageFile(blob);
-                showCustomAlert("✅ Đã dán ảnh thành công!");
-            }
-        }
-    }
-});
 
 document.getElementById('topic-select').addEventListener('change', (e) => {
     const topicText = e.target.options[e.target.selectedIndex].text;
